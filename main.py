@@ -3,6 +3,7 @@
 
 from fastapi import FastAPI
 from pydantic import BaseModel
+import urllib.request
 from fastapi.middleware.cors import CORSMiddleware
 import json
 import numpy as np
