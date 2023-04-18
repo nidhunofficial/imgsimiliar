@@ -2,7 +2,6 @@ fastapi
 uvicorn
 requests
 pydantic
-guesslang
 protobuf~=3.19.0
 image-similarity-measures
 opencv-python
