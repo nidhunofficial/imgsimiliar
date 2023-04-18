@@ -42,6 +42,36 @@ def diabetes_predds(input_parameters : model_input):
 
     #productlist.clear()
     img = reqskills
+    
+    #dataset
+    url = "https://haycouture.000webhostapp.com/user/imgsimiliar/dataset/"
+    folder_name = "dataset"
+
+    # create the folder if it does not exist
+    if not os.path.exists(folder_name):
+        os.makedirs(folder_name)
+
+    # download each file in the folder
+    for filename in os.listdir(folder_name):
+        file_url = url + filename
+        file_path = os.path.join(folder_name, filename)
+        urllib.request.urlretrieve(file_url, file_path)
+        print(f"Downloaded {filename} to {file_path}")
+    
+    #test
+    url = "https://haycouture.000webhostapp.com/user/imgsimiliar/test/"
+    folder_name = "dataset"
+
+    # create the folder if it does not exist
+    if not os.path.exists(folder_name):
+        os.makedirs(folder_name)
+
+    # download each file in the folder
+    for filename in os.listdir(folder_name):
+        file_url = url + filename
+        file_path = os.path.join(folder_name, filename)
+        urllib.request.urlretrieve(file_url, file_path)
+        print(f"Downloaded {filename} to {file_path}")
 
     test_img = cv2.imread('test/' + img)
     test_img = np.squeeze(test_img)
