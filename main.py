@@ -35,6 +35,7 @@ class model_input(BaseModel):
 
 @app.post('/imagesimiliar_prediction')
 def diabetes_predds(input_parameters : model_input):
+    print('hi')
     input_data = input_parameters.json()
     input_dictionary = json.loads(input_data)
 
