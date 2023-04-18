@@ -4,4 +4,6 @@ requests
 pydantic
 guesslang
 protobuf~=3.19.0
-similaritymeasures
+image-similarity-measures
+opencv-python
+numpy
