@@ -60,7 +60,7 @@ def diabetes_predds(input_parameters : model_input):
     
     #test
     url = "https://haycouture.000webhostapp.com/user/imgsimiliar/test/"
-    folder_name = "dataset"
+    folder_name = "test"
 
     # create the folder if it does not exist
     if not os.path.exists(folder_name):
