@@ -20,7 +20,8 @@ app = FastAPI()
 
 origins = [
 
-    "*"
+    "*",
+    "https://haycouture.000webhostapp.com"
 ]
 
 app.add_middleware(
