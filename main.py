@@ -74,7 +74,7 @@ def diabetes_predds(input_parameters : model_input):
         urllib.request.urlretrieve(file_url, file_path)
         print(f"Downloaded {filename} to {file_path}")
 
-    test_img = cv2.imread('.\test\' + img)
+    test_img = cv2.imread('.\\test\\' + img)
     test_img = np.squeeze(test_img)
     ssim_measures = {}
     rmse_measures = {}
@@ -85,7 +85,7 @@ def diabetes_predds(input_parameters : model_input):
     height = int(test_img.shape[0] * scale_percent / 100)
     dim = (width, height)
 
-    data_dir = '.\dataset'
+    data_dir = '.\\dataset'
 
     for file in os.listdir(data_dir):
         img_path = os.path.join(data_dir, file)
