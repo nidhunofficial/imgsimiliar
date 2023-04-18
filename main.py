@@ -33,7 +33,6 @@ app.add_middleware(
 class model_input(BaseModel):
     Reqskills : str
 
-model = pickle.load(open('productsimiliar.sav','rb'))
 @app.post('/imagesimiliar_prediction')
 def diabetes_predds(input_parameters : model_input):
     input_data = input_parameters.json()
@@ -95,15 +94,7 @@ def calc_closest_val(dicts, checkMax):
     dicts = dict(sorted_dicts)
 
     out = dict(islice(dicts.items(), 5))
-    #print("hi")
 
-    # for key, value in out.items():
-    #     str1 = str(key)
-    #     ind = str1.find('_')
-    #     print(key[8:])
-    #     productlist.append(key[8:ind-2])
-    #     if (value == closest):
-    #       result[key] = closest
 
     for key, value in out.items():
         print(key[8:])
